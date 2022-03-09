@@ -21,5 +21,6 @@ public class TestaInsercaoComParametro {
             Integer id = rst.getInt(1);
             System.out.printf("O ID criado foi: %d %n", id);
         }
+        rst.close();
     }
 }

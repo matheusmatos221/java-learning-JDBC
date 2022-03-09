@@ -22,6 +22,6 @@ public class TestaInsercao {
         }
 
         System.out.printf("SQL STATEMENT RESULT: %5b %n", resultado);
-
+        rst.close();
     }
 }
