@@ -1,19 +1,14 @@
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class TestaListagem {
     public static void main(String[] args) throws SQLException {
 
-        // Conecta no Banco de Dados
-        System.out.println("----------------------------");
-        System.out.println("Tentando conectar com BD");
-        System.out.println("----------------------------");
-        Connection connection = DriverManager.getConnection("" +
-                        "jdbc:mysql://localhost/loja_virtual?useTimezone=true&serverTimezone=UTC",
-                "root", "password");
-        System.out.println("----------------------------");
-        System.out.println("Conexao com BD bem-sucedida!");
-        System.out.println("----------------------------");
-
+        // Cria conexao com BD
+        CriaConexao criaConexao = new CriaConexao();
+        Connection connection = criaConexao.recuperarConexao();
 
         Statement statement = connection.createStatement();
         System.out.println("----------------------------");
