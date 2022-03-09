@@ -10,6 +10,7 @@ public class TestaConexao {
         Connection connection = DriverManager.getConnection("" +
                 "jdbc:mysql://localhost/loja_virtual?useTimezone=true&serverTimezone=UTC",
                 "root", "password");
+        System.out.println("Conexao com BD bem-sucedida!");
 
         // Fecha conexão do Banco de Dados
         connection.close();
