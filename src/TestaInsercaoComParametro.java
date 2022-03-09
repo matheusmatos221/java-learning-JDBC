@@ -12,12 +12,12 @@ public class TestaInsercaoComParametro {
         ConnectionFactory factory = new ConnectionFactory();
         Connection connection = factory.recuperarConexao();
 
+        String sql = "INSERT INTO PRODUTO (nome, descricao) VALUES ('" + nome + "', '"+ descricao +"');";
+        System.out.println(sql);
         // Statement (declaraçao de consulta SQL)
         Statement statement = connection.createStatement();
 
-        boolean resultado = statement.execute("INSERT INTO PRODUTO (nome, descricao) VALUES" +
-                        " ('" + nome + "', '"+ descricao +"');",
-                Statement.RETURN_GENERATED_KEYS);
+        boolean resultado = statement.execute(sql, Statement.RETURN_GENERATED_KEYS);
         ResultSet rst = statement.getGeneratedKeys();
         while (rst.next()){
             Integer id = rst.getInt(1);
