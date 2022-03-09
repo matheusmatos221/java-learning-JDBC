@@ -1,7 +1,8 @@
-import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 
 public class TestaListagem {
     public static void main(String[] args) throws SQLException {
@@ -10,13 +11,13 @@ public class TestaListagem {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         Connection connection = connectionFactory.recuperarConexao();
 
-        Statement statement = connection.createStatement();
         System.out.println("----------------------------");
         System.out.println("Executando QUERY");
         System.out.println("----------------------------");
-        statement.execute("SELECT ID, NOME, DESCRICAO FROM PRODUTO;");
+        PreparedStatement stm = connection.prepareStatement("SELECT ID, NOME, DESCRICAO FROM PRODUTO;");
+        stm.execute();
 
-        ResultSet resultSet = statement.getResultSet();
+        ResultSet resultSet = stm.getResultSet();
 
         while (resultSet.next()){
             Integer id = resultSet.getInt("ID");
