@@ -6,7 +6,6 @@ import java.util.List;
 
 import br.com.matheus.jdbc.modelo.Categoria;
 import br.com.matheus.jdbc.modelo.Produto;
-import com.sun.istack.internal.NotNull;
 
 public class ProdutoDAO {
 
@@ -75,4 +74,5 @@ public class ProdutoDAO {
         }
         return produtos;
     }
+
 }

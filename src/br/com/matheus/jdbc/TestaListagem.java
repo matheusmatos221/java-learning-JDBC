@@ -34,6 +34,7 @@ public class TestaListagem {
         }
 
         // Fecha conexão do Banco de Dados
+        stm.close();
         connection.close();
         System.out.println("Conexão com BD fechada");
     }
