@@ -1,5 +1,6 @@
-import br.com.matheus.jdbc.ConnectionFactory;
-import br.com.matheus.jdbc.ProdutoDAO;
+package br.com.matheus.jdbc;
+
+import br.com.matheus.jdbc.dao.ProdutoDAO;
 import br.com.matheus.jdbc.modelo.Produto;
 
 import java.sql.*;

@@ -1,4 +1,4 @@
-package br.com.matheus.jdbc;
+package br.com.matheus.jdbc.dao;
 
 import java.sql.*;
 import java.util.ArrayList;
