@@ -4,11 +4,11 @@ import java.sql.*;
 
 import br.com.matheus.jdbc.modelo.Produto;
 
-public class PersistenciaProduto {
+public class ProdutoDAO {
 
     private Connection connection;
 
-    public PersistenciaProduto(Connection connection){
+    public ProdutoDAO(Connection connection){
         this.connection = connection;
     }
 
