@@ -1,3 +1,5 @@
+package br.com.matheus.jdbc;
+
 import java.sql.*;
 
 public class TestaInsercaoComParametro {

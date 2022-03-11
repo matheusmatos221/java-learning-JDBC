@@ -1,3 +1,5 @@
+package br.com.matheus.jdbc;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
